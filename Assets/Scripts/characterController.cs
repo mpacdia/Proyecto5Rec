@@ -47,7 +47,6 @@ public class characterController : MonoBehaviour
             index = Random.Range(0, randomCharacter.Count);
             player = randomCharacter[index];
             Instantiate(player,new Vector3(50, 5, -50),Quaternion.identity);
-            //player.transform.position = ;
             hitsLeft = 3;
         }
     }
