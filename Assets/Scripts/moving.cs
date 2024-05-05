@@ -1,19 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Services.Analytics.Internal;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class moving : MonoBehaviour
 {
 
-    Rigidbody rb;
+    NavMeshAgent playerAgent;
+    public GameObject player;
 
-    float mvmntSpeed = 15;
-    private float movX;
-    private float movY;
+
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        playerAgent = player.GetComponent<NavMeshAgent>();
 
     }
 
@@ -21,14 +22,16 @@ public class moving : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movX = Input.GetAxis("Horizontal");
-        movY = Input.GetAxis("Vertical");
-    }
+        Ray cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-    private void FixedUpdate()
-    {
-        Vector3 speed = new Vector3(movX * mvmntSpeed, rb.velocity.y, movY * mvmntSpeed);
-        rb.velocity = speed;
-    }
+        RaycastHit hit;
 
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (Physics.Raycast(cameraRay, out hit))
+            {
+                playerAgent.destination = hit.point;
+            }
+        }
+    }
 }
