@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using Cinemachine;
 
-public class characterController : MonoBehaviour
+public class randomCharacterSlector : MonoBehaviour
 {
     public NavMeshAgent playerAgent;
 
@@ -20,19 +20,7 @@ public class characterController : MonoBehaviour
 
     public GameObject player;
 
-    public CinemachineVirtualCamera cameraInitial;
-    public CinemachineVirtualCamera camera1;
-    public CinemachineVirtualCamera camera2;
-    public CinemachineVirtualCamera camera3;
-
     public int hitsLeft = 0;
-
-    float mvmntSpeed = 5;
-
-    Rigidbody rb;
-
-    private float movX;
-    private float movY;
 
     // Start is called before the first frame update
     void Start()
@@ -45,25 +33,16 @@ public class characterController : MonoBehaviour
         randomCharacter.Add(character6);
         randomCharacter.Add(character7);
 
-        rb = GetComponent<Rigidbody>();
     }
 
 
     // Update is called once per frame
     void Update()
-    {
-        movX = Input.GetAxis("Horizontal");
-        movY = Input.GetAxis("Vertical");
-        spawnCharacter();
-
-        
+    {       
+        spawnCharacter();        
     }
 
-    private void FixedUpdate()
-    {
-        Vector3 speed = new Vector3(movX * mvmntSpeed, rb.velocity.y, movY * mvmntSpeed);
-        rb.velocity = speed;
-    }
+    
 
     void spawnCharacter()
     {

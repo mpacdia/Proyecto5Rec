@@ -628,9 +628,10 @@ GameObject:
   - component: {fileID: 2602231374797837622}
   - component: {fileID: 2602231374797837620}
   - component: {fileID: 2602231374797837611}
+  - component: {fileID: -519189511383761357}
   m_Layer: 0
   m_Name: LittleGhost_LP (4)
-  m_TagString: Untagged
+  m_TagString: player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -724,6 +725,18 @@ CapsuleCollider:
   m_Height: 0.73960495
   m_Direction: 1
   m_Center: {x: -0.0075883865, y: 0.33836842, z: 0.00768137}
+--- !u!114 &-519189511383761357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2602231374797837610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e810c0079cd2b8e4d96c45918496dc95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2602231374847269571
 GameObject:
   m_ObjectHideFlags: 0
