@@ -4,9 +4,8 @@ using UnityEngine;
 using UnityEngine.AI;
 using Cinemachine;
 
-public class randomCharacterSlector : MonoBehaviour
+public class randomCharacterSelector : MonoBehaviour
 {
-    public NavMeshAgent playerAgent;
 
     List<GameObject> randomCharacter = new List<GameObject>();
     public GameObject character1;
