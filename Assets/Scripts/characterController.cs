@@ -27,6 +27,13 @@ public class characterController : MonoBehaviour
 
     public int hitsLeft = 0;
 
+    float mvmntSpeed = 5;
+
+    Rigidbody rb;
+
+    private float movX;
+    private float movY;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,15 +44,25 @@ public class characterController : MonoBehaviour
         randomCharacter.Add(character5);
         randomCharacter.Add(character6);
         randomCharacter.Add(character7);
+
+        rb = GetComponent<Rigidbody>();
     }
 
 
     // Update is called once per frame
     void Update()
     {
+        movX = Input.GetAxis("Horizontal");
+        movY = Input.GetAxis("Vertical");
         spawnCharacter();
 
         
+    }
+
+    private void FixedUpdate()
+    {
+        Vector3 speed = new Vector3(movX * mvmntSpeed, rb.velocity.y, movY * mvmntSpeed);
+        rb.velocity = speed;
     }
 
     void spawnCharacter()
@@ -57,10 +74,5 @@ public class characterController : MonoBehaviour
             Instantiate(player,new Vector3(50, 5, -50),Quaternion.identity);
             hitsLeft = 3;
         }
-    }
-
-    void movement()
-    {
-
     }
 }
