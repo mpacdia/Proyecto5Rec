@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Cinemachine;
 
 public class characterController : MonoBehaviour
 {
@@ -18,6 +19,11 @@ public class characterController : MonoBehaviour
     int index;
 
     public GameObject player;
+
+    public CinemachineVirtualCamera cameraInitial;
+    public CinemachineVirtualCamera camera1;
+    public CinemachineVirtualCamera camera2;
+    public CinemachineVirtualCamera camera3;
 
     public int hitsLeft = 0;
 
@@ -38,6 +44,8 @@ public class characterController : MonoBehaviour
     void Update()
     {
         spawnCharacter();
+
+        
     }
 
     void spawnCharacter()
@@ -49,5 +57,10 @@ public class characterController : MonoBehaviour
             Instantiate(player,new Vector3(50, 5, -50),Quaternion.identity);
             hitsLeft = 3;
         }
+    }
+
+    void movement()
+    {
+
     }
 }
