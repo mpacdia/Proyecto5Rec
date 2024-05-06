@@ -16,7 +16,10 @@ public class cameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        cameraInitial = GameObject.Find("cameraInitial").GetComponent<CinemachineVirtualCamera>();
+        cameraZone1 = GameObject.Find("cameraZone1").GetComponent<CinemachineVirtualCamera>();
+        cameraZone2 = GameObject.Find("cameraZone2").GetComponent<CinemachineVirtualCamera>();
+        cameraZone3 = GameObject.Find("cameraZone3").GetComponent<CinemachineVirtualCamera>();
     }
 
     // Update is called once per frame
