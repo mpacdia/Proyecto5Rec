@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using Unity.VisualScripting;
 
-public class enemyBicho1 : MonoBehaviour
+public class enemySeta : MonoBehaviour
 {
-    NavMeshAgent agentBicho1;
+    NavMeshAgent agentSeta;
     public GameObject player;
     private float waitTime = 2.5f;
 
@@ -14,13 +13,13 @@ public class enemyBicho1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        agentBicho1 = GetComponent<NavMeshAgent>();
+        agentSeta = GetComponent<NavMeshAgent>();
         StartCoroutine(chasePlayerAtIntervals());
     }
 
     IEnumerator chasePlayerAtIntervals()
     {
-        while(true)
+        while (true)
         {
             chasePlayer();
             yield return new WaitForSeconds(waitTime);
@@ -30,6 +29,6 @@ public class enemyBicho1 : MonoBehaviour
 
     void chasePlayer()
     {
-        agentBicho1.destination = player.transform.position;
+        agentSeta.destination = player.transform.position;
     }
 }

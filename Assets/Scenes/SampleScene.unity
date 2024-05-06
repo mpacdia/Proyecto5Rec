@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -383,7 +383,7 @@ GameObject:
   - component: {fileID: 193919443}
   - component: {fileID: 193919444}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: spawnZone2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -398,8 +398,8 @@ Transform:
   m_GameObject: {fileID: 193919442}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -64.806816, y: 0, z: 66.10162}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -95, y: 1, z: 50}
+  m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1762227570}
@@ -1216,7 +1216,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_LocalScale: {x: 20, y: 1, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1741,7 +1741,7 @@ GameObject:
   - component: {fileID: 1293697488}
   - component: {fileID: 1293697489}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: spawnZone1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1756,8 +1756,8 @@ Transform:
   m_GameObject: {fileID: 1293697487}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -19.806814, y: 0, z: 111.10162}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -50, y: 1, z: 95}
+  m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1762227570}
@@ -2345,7 +2345,7 @@ GameObject:
   - component: {fileID: 1750082621}
   - component: {fileID: 1750082622}
   m_Layer: 0
-  m_Name: GameObject (3)
+  m_Name: spawnZone3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2360,8 +2360,8 @@ Transform:
   m_GameObject: {fileID: 1750082620}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -64.806816, y: 0, z: -33.898373}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -95, y: 1, z: -50}
+  m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1762227570}
@@ -2396,6 +2396,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1762227570}
+  - component: {fileID: 1762227571}
   m_Layer: 0
   m_Name: spawnZones
   m_TagString: Untagged
@@ -2412,16 +2413,37 @@ Transform:
   m_GameObject: {fileID: 1762227569}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30, y: 0, z: -16}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1293697488}
-  - {fileID: 1872495537}
   - {fileID: 193919443}
   - {fileID: 1750082621}
+  - {fileID: 1872495537}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1762227571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762227569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fb7a92ad2f061e4abf482b6a4d80487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bichoSeta: {fileID: 2408632436584175098, guid: 246301427ae7503419ecb1c82f2aeae9, type: 3}
+  bichoCactus: {fileID: 7329387171318403988, guid: 55c4d1681d1eb3e4fb01c0c991c0b710, type: 3}
+  listSpawnZones:
+  - {fileID: 1293697487}
+  - {fileID: 193919442}
+  - {fileID: 1750082620}
+  - {fileID: 1872495536}
+  waitTimeCactus: 5
+  waitTimeSeta: 5
 --- !u!1 &1872495536
 GameObject:
   m_ObjectHideFlags: 0
@@ -2433,7 +2455,7 @@ GameObject:
   - component: {fileID: 1872495537}
   - component: {fileID: 1872495538}
   m_Layer: 0
-  m_Name: GameObject (2)
+  m_Name: spawnZone4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2448,8 +2470,8 @@ Transform:
   m_GameObject: {fileID: 1872495536}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -19.806814, y: 0, z: -78.89838}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -50, y: 1, z: -95}
+  m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1762227570}
