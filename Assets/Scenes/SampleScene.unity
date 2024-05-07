@@ -2437,6 +2437,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bichoSeta: {fileID: 2408632436584175098, guid: 246301427ae7503419ecb1c82f2aeae9, type: 3}
   bichoCactus: {fileID: 7329387171318403988, guid: 55c4d1681d1eb3e4fb01c0c991c0b710, type: 3}
+  agentSeta: {fileID: 6414334655982819401, guid: 246301427ae7503419ecb1c82f2aeae9, type: 3}
+  agentCactus: {fileID: 1653006134939821015, guid: 55c4d1681d1eb3e4fb01c0c991c0b710, type: 3}
   listSpawnZones:
   - {fileID: 1293697487}
   - {fileID: 193919442}
@@ -2444,6 +2446,7 @@ MonoBehaviour:
   - {fileID: 1872495536}
   waitTimeCactus: 5
   waitTimeSeta: 5
+  rcs: {fileID: 2124983961}
 --- !u!1 &1872495536
 GameObject:
   m_ObjectHideFlags: 0
@@ -2654,8 +2657,6 @@ MonoBehaviour:
   character5: {fileID: 5446477390807014373, guid: b713585f24f940f4eadb10319818ef40, type: 3}
   character6: {fileID: 2676405798547930095, guid: 4b5b08dfd84e3c342b10a4e2ed977d48, type: 3}
   character7: {fileID: 958745142335686053, guid: 95aa05ec0ea0a884ab92946b57d2c7b4, type: 3}
-  player: {fileID: 0}
-  hitsLeft: 0
 --- !u!54 &2124983962
 Rigidbody:
   m_ObjectHideFlags: 0
