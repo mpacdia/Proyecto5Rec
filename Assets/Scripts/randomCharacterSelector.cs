@@ -16,9 +16,13 @@ public class randomCharacterSelector : MonoBehaviour
     public GameObject character7;
     int index;
 
-    public GameObject player;
+    private GameObject player;
+    public GameObject Player
+    {
+        get { return player; }
+        set { player = value; }
+    }
 
-    public int hitsLeft = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +34,10 @@ public class randomCharacterSelector : MonoBehaviour
         randomCharacter.Add(character5);
         randomCharacter.Add(character6);
         randomCharacter.Add(character7);
-
+        index = Random.Range(0, randomCharacter.Count);
+        player = randomCharacter[index];
+        Instantiate(player, new Vector3(50, 5, -50), Quaternion.identity);
+        player.GetComponent<damageContorller>().HitsLeft = 3;
     }
 
 
@@ -44,12 +51,12 @@ public class randomCharacterSelector : MonoBehaviour
 
     void spawnCharacter()
     {
-        if (hitsLeft == 0)
+        if (player != null && player.GetComponent<damageContorller>().HitsLeft == 0)
         {
             index = Random.Range(0, randomCharacter.Count);
             player = randomCharacter[index];
             Instantiate(player,new Vector3(50, 5, -50),Quaternion.identity);
-            hitsLeft = 3;
+            player.GetComponent<damageContorller>().HitsLeft = 3;
         }
     }
 }

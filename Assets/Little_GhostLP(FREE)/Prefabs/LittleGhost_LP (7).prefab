@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 4569834384654731410}
   - component: {fileID: -5059993591780888160}
   - component: {fileID: 8516437348471333234}
+  - component: {fileID: -8213060406237917770}
   m_Layer: 0
   m_Name: LittleGhost_LP (7)
   m_TagString: player
@@ -351,6 +352,18 @@ MonoBehaviour:
   cameraZone1: {fileID: 0}
   cameraZone2: {fileID: 0}
   cameraZone3: {fileID: 0}
+--- !u!114 &-8213060406237917770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958745142335686053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a7171d35491878499d82868176527d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &958745142378363025
 GameObject:
   m_ObjectHideFlags: 0
