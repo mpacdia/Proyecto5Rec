@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.PlasticSCM.Editor.WebApi;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class damageContorller : MonoBehaviour
 {
     private int hitsLeft = 0;
+
+    public TMP_Text hitsLeftText;
 
     public int HitsLeft   // property
     {
@@ -19,7 +23,15 @@ public class damageContorller : MonoBehaviour
     }
 
     // public int var;
+    private void Start()
+    {
+        hitsLeftText = GameObject.Find("hitsLeftText").GetComponent<TMP_Text>();
+    }
 
+    private void FixedUpdate()
+    {
+        hitsLeftText.text = "HitsLeft:" + HitsLeft.ToString();
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
