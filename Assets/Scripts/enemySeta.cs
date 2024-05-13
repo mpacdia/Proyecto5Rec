@@ -6,14 +6,16 @@ using UnityEngine.AI;
 public class enemySeta : MonoBehaviour
 {
     NavMeshAgent agentSeta;
-    public GameObject player;
+
     private float waitTime = 2.5f;
 
+    randomCharacterSelector rcs;
 
     // Start is called before the first frame update
     void Start()
     {
         agentSeta = GetComponent<NavMeshAgent>();
+        rcs = GameObject.Find("characterInitialPos").GetComponent<randomCharacterSelector>();
         StartCoroutine(chasePlayerAtIntervals());
     }
 
@@ -29,6 +31,6 @@ public class enemySeta : MonoBehaviour
 
     void chasePlayer()
     {
-        agentSeta.destination = player.transform.position;
+        agentSeta.destination = rcs.Player.transform.position;
     }
 }

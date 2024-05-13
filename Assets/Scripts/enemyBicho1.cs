@@ -7,14 +7,16 @@ using Unity.VisualScripting;
 public class enemyBicho1 : MonoBehaviour
 {
     NavMeshAgent agentBicho1;
-    public GameObject player;
+    
     private float waitTime = 2.5f;
 
+    randomCharacterSelector rcs;
 
     // Start is called before the first frame update
     void Start()
     {
         agentBicho1 = GetComponent<NavMeshAgent>();
+        rcs = GameObject.Find("characterInitialPos").GetComponent<randomCharacterSelector>();
         StartCoroutine(chasePlayerAtIntervals());
     }
 
@@ -30,6 +32,6 @@ public class enemyBicho1 : MonoBehaviour
 
     void chasePlayer()
     {
-        agentBicho1.destination = player.transform.position;
+        agentBicho1.destination = rcs.Player.transform.position;
     }
 }

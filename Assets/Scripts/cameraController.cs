@@ -14,7 +14,7 @@ public class cameraController : MonoBehaviour
     public CinemachineVirtualCamera cameraZone3;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         cameraInitial = GameObject.Find("cameraInitial").GetComponent<CinemachineVirtualCamera>();
         cameraZone1 = GameObject.Find("cameraZone1").GetComponent<CinemachineVirtualCamera>();

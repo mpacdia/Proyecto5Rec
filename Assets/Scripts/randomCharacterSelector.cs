@@ -35,8 +35,7 @@ public class randomCharacterSelector : MonoBehaviour
         randomCharacter.Add(character6);
         randomCharacter.Add(character7);
         index = Random.Range(0, randomCharacter.Count);
-        player = randomCharacter[index];
-        Instantiate(player, new Vector3(50, 5, -50), Quaternion.identity);
+        player = Instantiate(randomCharacter[index], new Vector3(50, 5, -50), Quaternion.identity);
         player.GetComponent<damageContorller>().HitsLeft = 3;
     }
 
@@ -54,8 +53,7 @@ public class randomCharacterSelector : MonoBehaviour
         if (player != null && player.GetComponent<damageContorller>().HitsLeft == 0)
         {
             index = Random.Range(0, randomCharacter.Count);
-            player = randomCharacter[index];
-            Instantiate(player,new Vector3(50, 5, -50),Quaternion.identity);
+            player = Instantiate(randomCharacter[index], new Vector3(50, 5, -50),Quaternion.identity);
             player.GetComponent<damageContorller>().HitsLeft = 3;
         }
     }

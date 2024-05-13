@@ -6,15 +6,17 @@ using UnityEngine.AI;
 public class enemyCactus : MonoBehaviour
 {
     NavMeshAgent agentCactus;
-    public GameObject player;
+   
     private float waitTime = 2.5f;
 
+    public randomCharacterSelector rcs;
 
     // Start is called before the first frame update
     void Start()
     {
         agentCactus = GetComponent<NavMeshAgent>();
-        StartCoroutine(chasePlayerAtIntervals());
+        rcs = GameObject.Find("characterInitialPos").GetComponent<randomCharacterSelector>();
+        StartCoroutine(chasePlayerAtIntervals());        
     }
 
     IEnumerator chasePlayerAtIntervals()
@@ -29,6 +31,6 @@ public class enemyCactus : MonoBehaviour
 
     void chasePlayer()
     {
-        agentCactus.destination = player.transform.position;
+        agentCactus.destination = rcs.Player.transform.position;
     }
 }

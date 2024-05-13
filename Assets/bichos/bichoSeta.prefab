@@ -137,6 +137,8 @@ GameObject:
   - component: {fileID: 3877898310079006747}
   - component: {fileID: 5156174271354461856}
   - component: {fileID: 6414334655982819401}
+  - component: {fileID: -4628150869016271790}
+  - component: {fileID: 7774700247556930137}
   m_Layer: 0
   m_Name: bichoSeta
   m_TagString: enemy
@@ -204,6 +206,39 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-4628150869016271790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2408632436584175098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 845928875fbfc92469fc10044f7a041f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &7774700247556930137
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2408632436584175098}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2640961459493420062
 GameObject:
   m_ObjectHideFlags: 0
