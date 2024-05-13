@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using Unity.VisualScripting;
 
 public class enemyBicho1 : MonoBehaviour
 {
@@ -32,6 +31,7 @@ public class enemyBicho1 : MonoBehaviour
 
     void chasePlayer()
     {
+        Debug.Log(rcs.Player);
         agentBicho1.destination = rcs.Player.transform.position;
     }
 }
