@@ -37,6 +37,7 @@ public class randomCharacterSelector : MonoBehaviour
         index = Random.Range(0, randomCharacter.Count);
         player = Instantiate(randomCharacter[index], new Vector3(50, 5, -50), Quaternion.identity);
         player.GetComponent<damageContorller>().HitsLeft = 3;
+        //
     }
 
 
